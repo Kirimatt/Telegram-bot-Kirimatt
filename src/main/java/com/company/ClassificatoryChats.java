@@ -22,7 +22,7 @@ public class ClassificatoryChats extends TelegramLongPollingBot {
 
             try {
                 switch (update.getMessage().getChatId().toString()) {
-                    case OWNER_CHAT_ID -> new IoTChat().initialize(update);
+                    case OWNER_CHAT_ID -> IoTChat.getIoTChat().initialize(update);
                     case SEAL_CHAT_ID -> new SealChat().initialize(update);
                     default -> new NoNameChat().initialize(update);
                 }
