@@ -1,12 +1,15 @@
 package com.company.commons;
 
+import java.util.Locale;
+
 public enum CommandsEnum {
 
     SHUTDOWN(0, "/shutdown", "Выключение компьютера через 2 минуты."),
     SPACE(1, "/space", "Пробел для паузы и воспроизведения."),
     YOUTUBE_LINK(2, "/youtube", "Воспроизвести ссылку на YouTube."),
     RIGHT_ARROW(3, "/right", "Стрелка вправо для проматывания вперед."),
-    LEFT_ARROW(4, "/left", "Стрелка влево для проматывания назад.");
+    LEFT_ARROW(4, "/left", "Стрелка влево для проматывания назад."),
+    NON_RECOGNIZED(999, "/non_recognized", "Стрелка влево для проматывания назад.");
 
     private final int id;
     private final String command, description;
@@ -31,11 +34,11 @@ public enum CommandsEnum {
 
     public static CommandsEnum getEnumByCommand(String command) {
         for (CommandsEnum commandsEnum: CommandsEnum.values()) {
-            if(command.contains(commandsEnum.getCommand()))
+            if(command.contains(commandsEnum.getCommand().toLowerCase(Locale.ROOT)))
                 return commandsEnum;
         }
 
-        throw new IllegalArgumentException();
+        return NON_RECOGNIZED;
     }
 
     @Override

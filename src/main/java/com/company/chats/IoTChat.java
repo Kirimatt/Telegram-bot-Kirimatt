@@ -16,7 +16,7 @@ public class IoTChat extends ClassificatoryChats {
 
     private static IoTChat ioTChat = new IoTChat();
 
-    private static EnumMap<CommandsEnum, IoTChat> ioTChatEnumMap;
+    private static EnumMap<CommandsEnum, IoTChat> ioTChatEnumMap = new EnumMap(CommandsEnum.class);
 
     protected static String answerBot;
 
@@ -25,8 +25,9 @@ public class IoTChat extends ClassificatoryChats {
         ioTChatEnumMap.put(CommandsEnum.RIGHT_ARROW, new RightArrowReq());
         ioTChatEnumMap.put(CommandsEnum.SHUTDOWN, new ShutdownReq());
         ioTChatEnumMap.put(CommandsEnum.SPACE, new SpaceReq());
-        //TODO: Понять почему WARN на возможный дедлок ютуба
         ioTChatEnumMap.put(CommandsEnum.YOUTUBE_LINK, new YouTubeReq());
+        //TODO: Понять почему WARN на возможный дедлок у последнего объявленного
+        ioTChatEnumMap.put(CommandsEnum.NON_RECOGNIZED, new NonRecognizedReq());
     }
 
     public static IoTChat getIoTChat() {
@@ -65,7 +66,6 @@ public class IoTChat extends ClassificatoryChats {
 
     }
 
-    protected void buildCommand(Update update) throws IOException {
-    }
+    protected void buildCommand(Update update) throws IOException {}
 
 }
