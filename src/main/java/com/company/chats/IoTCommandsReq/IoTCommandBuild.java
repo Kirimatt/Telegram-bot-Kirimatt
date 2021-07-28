@@ -2,6 +2,7 @@ package com.company.chats.IoTCommandsReq;
 
 import org.telegram.telegrambots.meta.api.objects.Update;
 
+import java.awt.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -10,7 +11,10 @@ import java.io.InputStreamReader;
  * @author azamat
  */
 public abstract class IoTCommandBuild {
-    public abstract String buildCommand(Update update) throws IOException;
+
+    Robot rb;
+
+    public abstract String buildCommand(Update update) throws IOException, AWTException;
     protected void cmdExecute(String command) throws IOException {
         ProcessBuilder builder = new ProcessBuilder(
                 "cmd.exe", "/c", command);

@@ -7,6 +7,7 @@ import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
+import java.awt.*;
 import java.io.IOException;
 import java.util.EnumMap;
 
@@ -37,7 +38,7 @@ public class IoTChat extends ClassificatoryChats {
 
     }
 
-    public final void initialize(Update update) throws TelegramApiException, IOException {
+    public final void initialize(Update update) throws TelegramApiException, IOException, AWTException {
 
         SendMessage message = new SendMessage(); // Create a SendMessage object with mandatory fields
         message.setChatId(update.getMessage().getChatId().toString());

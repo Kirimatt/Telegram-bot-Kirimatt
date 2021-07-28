@@ -7,6 +7,7 @@ import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
+import java.awt.*;
 import java.io.IOException;
 
 public class ClassificatoryChats extends TelegramLongPollingBot {
@@ -26,7 +27,7 @@ public class ClassificatoryChats extends TelegramLongPollingBot {
                     case SEAL_CHAT_ID -> new SealChat().initialize(update);
                     default -> new NoNameChat().initialize(update);
                 }
-            } catch (TelegramApiException | IOException e) {
+            } catch (TelegramApiException | IOException | AWTException e) {
                 e.printStackTrace();
             }
 

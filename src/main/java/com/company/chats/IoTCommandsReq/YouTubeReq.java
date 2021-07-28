@@ -10,38 +10,32 @@ import java.io.IOException;
 public class YouTubeReq extends IoTCommandBuild {
 
     @Override
-    public String buildCommand(Update update) throws IOException {
+    public String buildCommand(Update update) throws IOException, AWTException {
 
-        String answerBot = "";
-        try {
+        String answerBot;
 
-            Robot rb=new Robot();
-            rb.keyPress(KeyEvent.VK_CONTROL);
-            rb.keyPress(KeyEvent.VK_W);
-            rb.keyRelease(KeyEvent.VK_CONTROL);
-            rb.keyRelease(KeyEvent.VK_W);
+        Robot rb=new Robot();
+        rb.keyPress(KeyEvent.VK_CONTROL);
+        rb.keyPress(KeyEvent.VK_W);
+        rb.keyRelease(KeyEvent.VK_CONTROL);
+        rb.keyRelease(KeyEvent.VK_W);
 
-            answerBot = "Closing old website link...\n";
+        answerBot = "Closing old website link...\n";
 
-            cmdExecute(
-                    "start "
-                            + update.getMessage().getText().replace(CommandsEnum.YOUTUBE_LINK.getCommand(), "").replace(" ", "")
-            );
+        cmdExecute(
+                "start "
+                        + update.getMessage().getText().replace(CommandsEnum.YOUTUBE_LINK.getCommand(), "").replace(" ", "")
+        );
 
-            answerBot += "Starting YouTube link...\n";
+        answerBot += "Starting YouTube link...\n";
 
-            Thread.sleep(5000);
+        rb.delay(5000);
 
-            rb.keyPress(KeyEvent.VK_F);
-            rb.keyRelease(KeyEvent.VK_F);
+        rb.keyPress(KeyEvent.VK_F);
+        rb.keyRelease(KeyEvent.VK_F);
 
-            answerBot += "Making full screen...";
+        answerBot += "Making full screen...";
 
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (AWTException ex) {
-            System.err.println("Robot error");
-        }
         return answerBot;
     }
 }
