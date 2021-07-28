@@ -11,6 +11,8 @@ public enum CommandsEnum {
     LEFT_ARROW(4, "/left", "Стрелка влево для проматывания назад."),
     SOUND_LOCK_ON(5, "/soundlockon", "Включение ограничения громкости."),
     SOUND_LOCK_OFF(6, "/soundlockoff", "Выключение ограничения громкости."),
+    UP_ARROW(7, "/up", "Стрелка вверх для увеличения громкости."),
+    DOWN_ARROW(8, "/down", "Стрелка вниз для увеличения громкости."),
     NON_RECOGNIZED(999, "/non_recognized", "Команда не распознана.");
 
     private final int id;

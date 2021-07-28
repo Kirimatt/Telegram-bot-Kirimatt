@@ -1,5 +1,6 @@
 package com.company.chats.IoTCommandsReq;
 
+import com.company.commons.CommandsEnum;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
 import java.awt.*;
@@ -11,6 +12,7 @@ public class LeftArrowReq extends IoTCommandBuild {
     public String buildCommand(Update update) throws AWTException {
         rb = new Robot();
         rb.keyPress(KeyEvent.VK_LEFT);
+        arrowDelay(rb, update, CommandsEnum.LEFT_ARROW);
         rb.keyRelease(KeyEvent.VK_LEFT);
 
         return "Pressing left arrow...";

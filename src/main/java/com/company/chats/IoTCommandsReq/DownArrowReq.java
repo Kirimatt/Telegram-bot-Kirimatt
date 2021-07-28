@@ -6,17 +6,18 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
-public class RightArrowReq extends IoTCommandBuild {
+/**
+ * @author azamat
+ */
+public class DownArrowReq extends IoTCommandBuild {
 
     @Override
     public String buildCommand(Update update) throws AWTException {
+        rb = new Robot();
+        rb.keyPress(KeyEvent.VK_DOWN);
+        arrowDelay(rb, update, CommandsEnum.DOWN_ARROW);
+        rb.keyRelease(KeyEvent.VK_DOWN);
 
-        Robot rb=new Robot();
-        rb.keyPress(KeyEvent.VK_RIGHT);
-        arrowDelay(rb, update, CommandsEnum.RIGHT_ARROW);
-        rb.keyRelease(KeyEvent.VK_RIGHT);
-
-        return "Pressing right arrow...";
-
+        return "Pressing down arrow...";
     }
 }

@@ -22,6 +22,8 @@ public class IoTChat extends ClassificatoryChats {
     static {
         ioTCommandEnumMap.put(CommandsEnum.LEFT_ARROW, new LeftArrowReq());
         ioTCommandEnumMap.put(CommandsEnum.RIGHT_ARROW, new RightArrowReq());
+        ioTCommandEnumMap.put(CommandsEnum.UP_ARROW, new UpArrowReq());
+        ioTCommandEnumMap.put(CommandsEnum.DOWN_ARROW, new DownArrowReq());
         ioTCommandEnumMap.put(CommandsEnum.SHUTDOWN, new ShutdownReq());
         ioTCommandEnumMap.put(CommandsEnum.SPACE, new SpaceReq());
         ioTCommandEnumMap.put(CommandsEnum.YOUTUBE_LINK, new YouTubeReq());
@@ -45,9 +47,9 @@ public class IoTChat extends ClassificatoryChats {
         System.err.println(update.getMessage().getChatId().toString());
 
         IoTCommandBuild ioTCommandBuild = ioTCommandEnumMap.get(CommandsEnum.getEnumByCommand(update.getMessage().getText()));
-        ioTCommandBuild.buildCommand(update);
 
-        message.setText(answerBot);
+
+        message.setText(ioTCommandBuild.buildCommand(update));
         execute(message); // Call method to send the message
     }
 
