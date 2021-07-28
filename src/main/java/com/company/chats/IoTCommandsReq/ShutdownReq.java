@@ -9,7 +9,13 @@ public class ShutdownReq extends IoTChat {
 
     @Override
     protected void buildCommand(Update update) throws IOException {
-        cmdExecute("shutdown.exe -s -f -t 120");
+        String keys = update.getMessage().getText().replace("/shutdown", "").replace(" ", "");
+        if(keys.isEmpty())
+            cmdExecute("shutdown.exe -s -f -t 120");
+        else
+            cmdExecute("shutdown.exe -s -f -t " + keys);
+
+        System.err.println(keys);
         answerBot = "Shutting down...";
     }
 }

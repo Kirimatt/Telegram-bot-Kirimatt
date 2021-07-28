@@ -26,7 +26,9 @@ public class IoTChat extends ClassificatoryChats {
         ioTChatEnumMap.put(CommandsEnum.SHUTDOWN, new ShutdownReq());
         ioTChatEnumMap.put(CommandsEnum.SPACE, new SpaceReq());
         ioTChatEnumMap.put(CommandsEnum.YOUTUBE_LINK, new YouTubeReq());
-        //TODO: Понять почему WARN на возможный дедлок у последнего объявленного
+        ioTChatEnumMap.put(CommandsEnum.SOUND_LOCK_ON, new SoundLockOnReq());
+        ioTChatEnumMap.put(CommandsEnum.SOUND_LOCK_OFF, new SoundLockOffReq());
+        //TODO: Понять почему WARN на возможный дедлок у последнего объявленного. Переделать наследовательность и добавить многопоточность.
         ioTChatEnumMap.put(CommandsEnum.NON_RECOGNIZED, new NonRecognizedReq());
     }
 
@@ -51,7 +53,7 @@ public class IoTChat extends ClassificatoryChats {
         execute(message); // Call method to send the message
     }
 
-    protected static void cmdExecute(String command) throws IOException {
+    protected void cmdExecute(String command) throws IOException {
         ProcessBuilder builder = new ProcessBuilder(
                 "cmd.exe", "/c", command);
         builder.redirectErrorStream(true);
