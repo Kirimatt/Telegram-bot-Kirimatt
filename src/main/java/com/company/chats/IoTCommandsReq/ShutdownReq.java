@@ -8,7 +8,10 @@ public class ShutdownReq extends IoTCommandBuild {
 
     @Override
     public String buildCommand(Update update) throws IOException {
-        String keys = update.getMessage().getText().replace("/shutdown", "").replace(" ", "");
+        String keys = update.getMessage().getText().
+                replace("/shutdown", "").
+                replace(" ", "");
+
         if(keys.isEmpty())
             cmdExecute("shutdown.exe -s -f -t 120");
         else

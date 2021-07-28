@@ -13,6 +13,9 @@ public enum CommandsEnum {
     SOUND_LOCK_OFF(6, "/soundlockoff", "Выключение ограничения громкости."),
     UP_ARROW(7, "/up", "Стрелка вверх для увеличения громкости."),
     DOWN_ARROW(8, "/down", "Стрелка вниз для увеличения громкости."),
+    OPEN_LINKS(9, "/openlinks", "Открывает вкладки с заданными ссылками."),
+    START_LINKS(10, "/startlinks", "Открывает начальные вкладки."),
+    CHANGE_CHECK_SITE(11, "/changecheck", "Меняет последний сайт для просмотра."),
     NON_RECOGNIZED(-1, "/non_recognized", "Команда не распознана.");
 
     private final int id;

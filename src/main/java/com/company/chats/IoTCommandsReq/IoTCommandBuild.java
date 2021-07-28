@@ -13,7 +13,9 @@ import java.io.InputStreamReader;
  */
 public abstract class IoTCommandBuild {
 
-    Robot rb;
+    protected Process soundLockProcess;
+    protected String actualCheckSite = "https://animego.org/anime/granica-pustoty-2-teoriya-ubiystva-chast-1-o1841";
+    protected Robot rb;
 
     public abstract String buildCommand(Update update) throws IOException, AWTException;
 
