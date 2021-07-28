@@ -33,6 +33,7 @@ public class IoTChat extends ClassificatoryChats {
         ioTCommandEnumMap.put(CommandsEnum.START_LINKS, new StartLinksReq());
         ioTCommandEnumMap.put(CommandsEnum.CHANGE_CHECK_SITE, new ChangeCheckSite());
         ioTCommandEnumMap.put(CommandsEnum.NON_RECOGNIZED, new NonRecognizedReq());
+        ioTCommandEnumMap.put(CommandsEnum.EXIT, new ExitReq());
     }
 
     public static IoTChat getIoTChat() {

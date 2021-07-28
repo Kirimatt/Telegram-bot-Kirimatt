@@ -16,6 +16,7 @@ public enum CommandsEnum {
     OPEN_LINKS(9, "/openlinks", "Открывает вкладки с заданными ссылками."),
     START_LINKS(10, "/startlinks", "Открывает начальные вкладки."),
     CHANGE_CHECK_SITE(11, "/changecheck", "Меняет последний сайт для просмотра."),
+    EXIT(12, "/exit", "Выходит из программы."),
     NON_RECOGNIZED(-1, "/non_recognized", "Команда не распознана.");
 
     private final int id;
