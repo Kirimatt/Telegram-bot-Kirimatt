@@ -1,25 +1,27 @@
 package com.company.chats.IoTCommandsReq;
 
-import com.company.chats.IoTChat;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.io.IOException;
 
-public class RightArrowReq extends IoTChat {
+public class RightArrowReq extends IoTCommandBuild {
 
     @Override
-    protected void buildCommand(Update update) {
+    public String buildCommand(Update update) throws IOException {
         try {
 
             Robot rb=new Robot();
             rb.keyPress(KeyEvent.VK_RIGHT);
             rb.keyRelease(KeyEvent.VK_RIGHT);
 
-            answerBot = "Pressing right arrow...";
+            return "Pressing right arrow...";
 
         } catch (AWTException e) {
             e.printStackTrace();
         }
+
+        throw new IOException();
     }
 }

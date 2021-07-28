@@ -1,6 +1,5 @@
 package com.company.chats.IoTCommandsReq;
 
-import com.company.chats.IoTChat;
 import com.company.commons.CommandsEnum;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
@@ -8,21 +7,31 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 
-public class YouTubeReq extends IoTChat {
+public class YouTubeReq extends IoTCommandBuild {
 
     @Override
-    protected void buildCommand(Update update) throws IOException {
-        cmdExecute(
-                "start "
-                        + update.getMessage().getText().replace(CommandsEnum.YOUTUBE_LINK.getCommand(), "").replace(" ", "")
-        );
+    public String buildCommand(Update update) throws IOException {
 
-        answerBot = "Starting YouTube link...\n";
-
+        String answerBot = "";
         try {
-            Thread.sleep(5000);
 
             Robot rb=new Robot();
+            rb.keyPress(KeyEvent.VK_CONTROL);
+            rb.keyPress(KeyEvent.VK_W);
+            rb.keyRelease(KeyEvent.VK_CONTROL);
+            rb.keyRelease(KeyEvent.VK_W);
+
+            answerBot = "Closing old website link...\n";
+
+            cmdExecute(
+                    "start "
+                            + update.getMessage().getText().replace(CommandsEnum.YOUTUBE_LINK.getCommand(), "").replace(" ", "")
+            );
+
+            answerBot += "Starting YouTube link...\n";
+
+            Thread.sleep(5000);
+
             rb.keyPress(KeyEvent.VK_F);
             rb.keyRelease(KeyEvent.VK_F);
 
@@ -33,5 +42,6 @@ public class YouTubeReq extends IoTChat {
         } catch (AWTException ex) {
             System.err.println("Robot error");
         }
+        return answerBot;
     }
 }
