@@ -13,7 +13,7 @@ public enum CommandsEnum {
     SOUND_LOCK_OFF(6, "/soundlockoff", "Выключение ограничения громкости."),
     UP_ARROW(7, "/up", "Стрелка вверх для увеличения громкости."),
     DOWN_ARROW(8, "/down", "Стрелка вниз для увеличения громкости."),
-    NON_RECOGNIZED(999, "/non_recognized", "Команда не распознана.");
+    NON_RECOGNIZED(-1, "/non_recognized", "Команда не распознана.");
 
     private final int id;
     private final String command, description;

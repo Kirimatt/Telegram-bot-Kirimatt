@@ -33,10 +33,10 @@ public abstract class IoTCommandBuild {
     }
 
     protected synchronized void arrowDelay(Robot rb, Update update, CommandsEnum commandsEnum) {
-        String replacement = update.getMessage().getText().
+        String keys = update.getMessage().getText().
                 replace(commandsEnum.getCommand(), "").
                 replace(" ", "");
-        if(!replacement.equals(""))
-        rb.delay(Integer.parseInt(replacement));
+        if(!keys.isEmpty())
+        rb.delay(Integer.parseInt(keys));
     }
 }
