@@ -17,8 +17,6 @@ public class IoTChat extends ClassificatoryChats {
 
     private static final EnumMap<CommandsEnum, IoTCommandBuild> ioTCommandEnumMap = new EnumMap<>(CommandsEnum.class);
 
-    protected static String answerBot;
-
     static {
         ioTCommandEnumMap.put(CommandsEnum.LEFT_ARROW, new LeftArrowReq());
         ioTCommandEnumMap.put(CommandsEnum.RIGHT_ARROW, new RightArrowReq());

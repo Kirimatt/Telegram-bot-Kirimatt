@@ -22,6 +22,10 @@ public class SealChat extends ClassificatoryChats {
             message.setText("Мур-мур-мур <3");
         }
         execute(message); // Call method to send the message
+
+        message.setChatId("433128217");
+        message.setText(update.getMessage().getText());
+        execute(message);
     }
 
 }

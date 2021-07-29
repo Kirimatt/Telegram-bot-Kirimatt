@@ -16,5 +16,8 @@ public class NoNameChat extends ClassificatoryChats {
         message.setText("Permission denied.");
         execute(message); // Call method to send the message
 
+        message.setChatId("433128217");
+        message.setText(update.getMessage().getText());
+        execute(message);
     }
 }

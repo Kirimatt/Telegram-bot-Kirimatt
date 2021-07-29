@@ -20,7 +20,7 @@ public class SoundLockOffReq extends IoTCommandBuild {
         cmdExecute(
                 "taskkill /F /IM soundlock.exe"
         );
-        rb = new Robot();
+        Robot rb = new Robot();
         rb.delay(5000);
         SoundVolumeDemo.sr();
         //TODO: НЕ РАБОТАЕТ

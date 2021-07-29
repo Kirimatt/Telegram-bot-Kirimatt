@@ -4,16 +4,12 @@ import com.company.commons.CommandsEnum;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
 import java.awt.*;
-import java.awt.event.KeyEvent;
 
 public class LeftArrowReq extends IoTCommandBuild {
 
     @Override
     public String buildCommand(Update update) throws AWTException {
-        rb = new Robot();
-        rb.keyPress(KeyEvent.VK_LEFT);
-        arrowDelay(rb, update, CommandsEnum.LEFT_ARROW);
-        rb.keyRelease(KeyEvent.VK_LEFT);
+        arrowDelay(update, CommandsEnum.LEFT_ARROW);
 
         return "Pressing left arrow...";
     }
