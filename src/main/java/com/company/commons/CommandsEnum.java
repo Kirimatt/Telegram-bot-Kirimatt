@@ -16,7 +16,12 @@ public enum CommandsEnum {
     OPEN_LINKS(9, "/openlinks", "Открывает вкладки с заданными ссылками."),
     START_LINKS(10, "/startlinks", "Открывает начальные вкладки."),
     CHANGE_CHECK_SITE(11, "/changecheck", "Меняет последний сайт для просмотра."),
-    EXIT(12, "/exit", "Выходит из программы."),
+    JUTSU_NEXT_EPISODE(12, "/jutsunext", "Пролистывает эпизод на следующий Jutsu."),
+    JUTSU_OPEN(13, "/jutsu", "Открывает ссылку на Jutsu."),
+    FULL_SIZE(14, "/full", "Открывает на полное окно."),
+    HELP(15, "/help", "Показывает все команды."),
+    EXIT(16, "/exit", "Выходит из программы."),
+    JUTSU_SKIP_OP(17, "/skip", "Пропускает опенинг."),
     NON_RECOGNIZED(-1, "/non_recognized", "Команда не распознана.");
 
     private final int id;

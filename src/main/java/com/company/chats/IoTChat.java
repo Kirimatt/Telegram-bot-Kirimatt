@@ -2,6 +2,10 @@ package com.company.chats;
 
 import com.company.ClassificatoryChats;
 import com.company.chats.IoTCommandsReq.*;
+import com.company.chats.IoTCommandsReq.FullSizeReq;
+import com.company.chats.IoTCommandsReq.jutsuRequests.JutsuOpenLinkReq;
+import com.company.chats.IoTCommandsReq.jutsuRequests.JutsuOpenNextEpisodeReq;
+import com.company.chats.IoTCommandsReq.jutsuRequests.JutsuSkipOpening;
 import com.company.commons.CommandsEnum;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
@@ -31,6 +35,11 @@ public class IoTChat extends ClassificatoryChats {
         ioTCommandEnumMap.put(CommandsEnum.START_LINKS, new StartLinksReq());
         ioTCommandEnumMap.put(CommandsEnum.CHANGE_CHECK_SITE, new ChangeCheckSite());
         ioTCommandEnumMap.put(CommandsEnum.NON_RECOGNIZED, new NonRecognizedReq());
+        ioTCommandEnumMap.put(CommandsEnum.JUTSU_NEXT_EPISODE, new JutsuOpenNextEpisodeReq());
+        ioTCommandEnumMap.put(CommandsEnum.HELP, new HelpReq());
+        ioTCommandEnumMap.put(CommandsEnum.JUTSU_OPEN, new JutsuOpenLinkReq());
+        ioTCommandEnumMap.put(CommandsEnum.FULL_SIZE, new FullSizeReq());
+        ioTCommandEnumMap.put(CommandsEnum.JUTSU_SKIP_OP, new JutsuSkipOpening());
         ioTCommandEnumMap.put(CommandsEnum.EXIT, new ExitReq());
     }
 
