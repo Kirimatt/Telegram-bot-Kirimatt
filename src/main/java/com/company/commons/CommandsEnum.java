@@ -33,6 +33,15 @@ public enum CommandsEnum {
         this.description = description;
     }
 
+    public static CommandsEnum getEnumByCommand(String command) {
+        for (CommandsEnum commandsEnum : CommandsEnum.values()) {
+            if (command.contains(commandsEnum.getCommand().toLowerCase(Locale.ROOT)))
+                return commandsEnum;
+        }
+
+        return NON_RECOGNIZED;
+    }
+
     public int getId() {
         return id;
     }
@@ -43,15 +52,6 @@ public enum CommandsEnum {
 
     public String getDescription() {
         return description;
-    }
-
-    public static CommandsEnum getEnumByCommand(String command) {
-        for (CommandsEnum commandsEnum: CommandsEnum.values()) {
-            if(command.contains(commandsEnum.getCommand().toLowerCase(Locale.ROOT)))
-                return commandsEnum;
-        }
-
-        return NON_RECOGNIZED;
     }
 
     @Override

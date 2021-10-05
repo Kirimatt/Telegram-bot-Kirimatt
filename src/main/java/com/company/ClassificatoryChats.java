@@ -8,15 +8,17 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 import java.awt.*;
-import java.io.*;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 
 public class ClassificatoryChats extends TelegramLongPollingBot {
 
+    private static final String OWNER_CHAT_ID = "433128217";
+    private static final String SEAL_CHAT_ID = "767606020";
     private static String username;
     private static String token;
-    private static final String ownerChatId = "433128217";
-    private static final String sealChatId = "767606020";
 
     static {
         try (InputStream input = new FileInputStream("./config.properties")) {
@@ -40,8 +42,8 @@ public class ClassificatoryChats extends TelegramLongPollingBot {
 
             try {
                 switch (update.getMessage().getChatId().toString()) {
-                    case ownerChatId -> IoTChat.getIoTChat().initialize(update);
-                    case sealChatId -> new SealChat().initialize(update);
+                    case OWNER_CHAT_ID -> IoTChat.getIoTChat().initialize(update);
+                    case SEAL_CHAT_ID -> new SealChat().initialize(update);
                     default -> new NoNameChat().initialize(update);
                 }
             } catch (TelegramApiException | IOException | AWTException e) {

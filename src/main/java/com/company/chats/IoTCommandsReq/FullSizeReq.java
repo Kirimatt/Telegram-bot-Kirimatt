@@ -11,7 +11,7 @@ public class FullSizeReq extends IoTCommandBuild {
     @Override
     public String buildCommand(Update update) throws IOException, AWTException {
 
-        Robot rb=new Robot();
+        Robot rb = new Robot();
         rb.keyPress(KeyEvent.VK_F);
         rb.keyRelease(KeyEvent.VK_F);
 

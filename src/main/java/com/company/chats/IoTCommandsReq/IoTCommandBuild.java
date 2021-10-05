@@ -38,7 +38,9 @@ public abstract class IoTCommandBuild {
         String line;
         while (true) {
             line = r.readLine();
-            if (line == null) { break; }
+            if (line == null) {
+                break;
+            }
             System.out.println(line);
         }
 
@@ -49,8 +51,8 @@ public abstract class IoTCommandBuild {
         String keys = update.getMessage().getText().
                 replace(commandsEnum.getCommand(), "").
                 replace(" ", "");
-        if(!keys.isEmpty())
-            for(int i = 0; i < Integer.parseInt(keys); i++) {
+        if (!keys.isEmpty())
+            for (int i = 0; i < Integer.parseInt(keys); i++) {
                 rb.keyPress(arrowMap.get(commandsEnum));
                 rb.keyRelease(arrowMap.get(commandsEnum));
             }

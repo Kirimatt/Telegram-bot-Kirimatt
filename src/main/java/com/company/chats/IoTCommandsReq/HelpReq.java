@@ -12,7 +12,7 @@ public class HelpReq extends IoTCommandBuild {
     @Override
     public String buildCommand(Update update) throws IOException, AWTException {
 
-        return  Arrays
+        return Arrays
                 .stream(CommandsEnum.values())
                 .map(n -> n.getCommand() + " -/- " + n.getDescription() + "\n")
                 .sorted()

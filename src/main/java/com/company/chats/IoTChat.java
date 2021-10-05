@@ -2,7 +2,6 @@ package com.company.chats;
 
 import com.company.ClassificatoryChats;
 import com.company.chats.IoTCommandsReq.*;
-import com.company.chats.IoTCommandsReq.FullSizeReq;
 import com.company.chats.IoTCommandsReq.jutsuRequests.JutsuOpenLinkReq;
 import com.company.chats.IoTCommandsReq.jutsuRequests.JutsuOpenNextEpisodeReq;
 import com.company.chats.IoTCommandsReq.jutsuRequests.JutsuSkipOpening;

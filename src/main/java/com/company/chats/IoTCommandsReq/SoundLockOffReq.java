@@ -14,8 +14,8 @@ public class SoundLockOffReq extends IoTCommandBuild {
     @Override
     public String buildCommand(Update update) throws IOException, AWTException {
 
-        if(soundLockProcess != null)
-        soundLockProcess.destroyForcibly();
+        if (soundLockProcess != null)
+            soundLockProcess.destroyForcibly();
 
         cmdExecute(
                 "taskkill /F /IM soundlock.exe"
@@ -27,28 +27,22 @@ public class SoundLockOffReq extends IoTCommandBuild {
         return "Killing sound lock program...\n";
     }
 
-    static class SoundVolumeDemo
-    {
-        public static void sr()
-        {
+    static class SoundVolumeDemo {
+        public static void sr() {
             Port.Info source = Port.Info.SPEAKER;
             //        source = Port.Info.LINE_OUT;
             //        source = Port.Info.HEADPHONE;
 
-            if (AudioSystem.isLineSupported(source))
-            {
-                try
-                {
+            if (AudioSystem.isLineSupported(source)) {
+                try {
                     Port outline = (Port) AudioSystem.getLine(source);
                     outline.open();
                     FloatControl volumeControl = (FloatControl) outline.getControl(FloatControl.Type.VOLUME);
-                    System.out.println("       volume: " + volumeControl.getValue() );
+                    System.out.println("       volume: " + volumeControl.getValue());
                     float v = 1F;
                     volumeControl.setValue(v);
 
-                }
-                catch (LineUnavailableException ex)
-                {
+                } catch (LineUnavailableException ex) {
                     System.err.println("source not supported");
                     ex.printStackTrace();
                 }

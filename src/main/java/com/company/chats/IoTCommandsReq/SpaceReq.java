@@ -9,7 +9,7 @@ public class SpaceReq extends IoTCommandBuild {
 
     @Override
     public String buildCommand(Update update) throws AWTException {
-        Robot rb=new Robot();
+        Robot rb = new Robot();
         rb.keyPress(KeyEvent.VK_SPACE);
         rb.keyRelease(KeyEvent.VK_SPACE);
 

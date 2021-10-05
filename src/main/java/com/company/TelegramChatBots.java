@@ -8,10 +8,10 @@ import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
 public class TelegramChatBots {
 
-    public static void registerBots(TelegramLongPollingBot ... telegramLongPollingBots) throws TelegramApiException {
+    public static void registerBots(TelegramLongPollingBot... telegramLongPollingBots) throws TelegramApiException {
 
         TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
-        for (TelegramLongPollingBot telegramLongPollingBot: telegramLongPollingBots) {
+        for (TelegramLongPollingBot telegramLongPollingBot : telegramLongPollingBots) {
             botsApi.registerBot(telegramLongPollingBot);
         }
 

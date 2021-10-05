@@ -17,7 +17,7 @@ public class JutsuOpenLinkReq extends JutsuMain {
 
     @Override
     public String buildCommand(Update update) throws IOException, AWTException {
-        System.setProperty("webdriver.chrome.driver","C:\\ProgramData\\chocolatey\\lib\\chromedriver\\tools\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\ProgramData\\chocolatey\\lib\\chromedriver\\tools\\chromedriver.exe");
 
         String site = update.getMessage().getText().
                 replace("/jutsu", "").
@@ -29,7 +29,7 @@ public class JutsuOpenLinkReq extends JutsuMain {
         driver = new ChromeDriver(options);
         driver.get(site);
 
-        Robot rb=new Robot();
+        Robot rb = new Robot();
         rb.delay(5000);
         rb.keyPress(KeyEvent.VK_CONTROL);
         rb.keyPress(KeyEvent.VK_W);

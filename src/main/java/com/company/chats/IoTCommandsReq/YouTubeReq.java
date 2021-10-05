@@ -14,7 +14,7 @@ public class YouTubeReq extends IoTCommandBuild {
 
         String answerBot;
 
-        Robot rb=new Robot();
+        Robot rb = new Robot();
         rb.keyPress(KeyEvent.VK_CONTROL);
         rb.keyPress(KeyEvent.VK_W);
         rb.keyRelease(KeyEvent.VK_CONTROL);

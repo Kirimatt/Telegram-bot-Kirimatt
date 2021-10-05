@@ -12,12 +12,12 @@ public class ShutdownReq extends IoTCommandBuild {
                 replace("/shutdown", "").
                 replace(" ", "");
 
-        if(keys.isEmpty())
+        if (keys.isEmpty())
             cmdExecute("shutdown.exe -s -f -t 120");
         else
             cmdExecute("shutdown.exe -s -f -t " + keys);
 
         System.err.println(keys);
-        return  "Shutting down...";
+        return "Shutting down...";
     }
 }

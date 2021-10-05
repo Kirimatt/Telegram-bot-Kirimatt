@@ -5,7 +5,7 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import java.awt.*;
 import java.io.IOException;
 
-public class StartLinksReq extends IoTCommandBuild{
+public class StartLinksReq extends IoTCommandBuild {
     private static final int ANISTAR_VERSION = 100;
 
 
@@ -27,6 +27,6 @@ public class StartLinksReq extends IoTCommandBuild{
 
         );
 
-        return  "Starting links...\n";
+        return "Starting links...\n";
     }
 }
