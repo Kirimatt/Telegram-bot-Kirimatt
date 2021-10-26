@@ -8,6 +8,7 @@ import java.io.IOException;
 
 /**
  * Открывает несколько ссылок
+ *
  * @author kirimatt
  */
 public class OpenLinksReq extends IoTCommandBuild {

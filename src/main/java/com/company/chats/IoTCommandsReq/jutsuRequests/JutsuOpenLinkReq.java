@@ -11,6 +11,7 @@ import java.io.IOException;
 
 /**
  * Открывает ссылку на jutsu с подключением драйвера Selenium и подгрузкой расширения для блокировки рекламы
+ *
  * @author kirimatt
  */
 public class JutsuOpenLinkReq extends JutsuMain {

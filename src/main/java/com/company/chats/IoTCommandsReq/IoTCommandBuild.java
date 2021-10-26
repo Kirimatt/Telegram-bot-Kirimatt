@@ -12,6 +12,7 @@ import java.util.EnumMap;
 
 /**
  * Класс для сборки команды
+ *
  * @author azamat
  */
 public abstract class IoTCommandBuild {

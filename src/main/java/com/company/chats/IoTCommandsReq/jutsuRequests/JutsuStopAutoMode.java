@@ -7,6 +7,7 @@ import java.io.IOException;
 
 /**
  * Останавливает поток с автоматическим модом
+ *
  * @author azamat
  */
 public class JutsuStopAutoMode extends JutsuMain {

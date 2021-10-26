@@ -16,6 +16,7 @@ import java.util.EnumMap;
 
 /**
  * Чат для удаленного управления компьютером
+ *
  * @author kirimatt
  */
 public class IoTChat extends ClassificatoryChats {

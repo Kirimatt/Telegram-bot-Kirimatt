@@ -8,6 +8,7 @@ import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
 /**
  * Главный класс для запуска приложения с массивом телеграм-ботов
+ *
  * @author kirimatt
  */
 public class TelegramChatBots {

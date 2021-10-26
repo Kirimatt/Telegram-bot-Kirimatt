@@ -9,6 +9,7 @@ import java.io.IOException;
 
 /**
  * Автоматический мод для просмотра серий
+ *
  * @author azamat
  */
 public class JutsuAutoMode extends JutsuMain {

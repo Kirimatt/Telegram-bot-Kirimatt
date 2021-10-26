@@ -6,6 +6,7 @@ import java.awt.*;
 
 /**
  * Выход из программы, что отключает бота
+ *
  * @author kirimatt
  */
 public class ExitReq extends IoTCommandBuild {

@@ -4,6 +4,7 @@ import java.util.Locale;
 
 /**
  * Перечисление для всех команд
+ *
  * @author kirimatt
  */
 public enum CommandsEnum {

@@ -8,6 +8,7 @@ import java.io.IOException;
 
 /**
  * Открывает следующий эпизод
+ *
  * @author kirimatt
  */
 public class JutsuOpenNextEpisodeReq extends JutsuMain {

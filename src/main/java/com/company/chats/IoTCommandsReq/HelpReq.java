@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
 
 /**
  * Высылает ответ со всеми командами
+ *
  * @author kirimatt
  */
 public class HelpReq extends IoTCommandBuild {

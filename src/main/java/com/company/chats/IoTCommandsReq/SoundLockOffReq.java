@@ -11,6 +11,7 @@ import java.io.IOException;
 
 /**
  * Команда для выключения "тихого" режима.
+ *
  * @author kirimatt
  */
 public class SoundLockOffReq extends IoTCommandBuild {

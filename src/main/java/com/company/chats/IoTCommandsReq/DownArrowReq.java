@@ -7,6 +7,7 @@ import java.awt.*;
 
 /**
  * Стрелка вниз
+ *
  * @author azamat
  */
 public class DownArrowReq extends IoTCommandBuild {

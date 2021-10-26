@@ -15,6 +15,7 @@ import java.util.Properties;
 
 /**
  * Класс для классификации и дальнейшей обработки чатов
+ *
  * @author kirimatt
  */
 public class ClassificatoryChats extends TelegramLongPollingBot {

@@ -7,6 +7,7 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 /**
  * Приватный чат
+ *
  * @author kirimatt
  */
 public class SealChat extends ClassificatoryChats {
