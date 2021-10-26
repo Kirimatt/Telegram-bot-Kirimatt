@@ -13,8 +13,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+/**
+ * Класс для классификации и дальнейшей обработки чатов
+ * @author kirimatt
+ */
 public class ClassificatoryChats extends TelegramLongPollingBot {
 
+    //TODO: Перенести данные в property файл, учесть, что для switch они должны быть финальными.
     private static final String OWNER_CHAT_ID = "433128217";
     private static final String SEAL_CHAT_ID = "767606020";
     private static String username;

@@ -6,6 +6,7 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import java.awt.*;
 
 /**
+ * Стрекла вверх
  * @author azamat
  */
 public class UpArrowReq extends IoTCommandBuild {

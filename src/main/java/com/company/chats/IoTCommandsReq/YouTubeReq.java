@@ -7,6 +7,9 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 
+/**
+ * Закрывает предыдущую вкладку, открывает ссылку на ютубе и ставит в полноэкранный режим
+ */
 public class YouTubeReq extends IoTCommandBuild {
 
     @Override
@@ -24,7 +27,8 @@ public class YouTubeReq extends IoTCommandBuild {
 
         cmdExecute(
                 "start "
-                        + update.getMessage().getText().replace(CommandsEnum.YOUTUBE_LINK.getCommand(), "").replace(" ", "")
+                        + update.getMessage().getText().replace(CommandsEnum.YOUTUBE_LINK.getCommand(), "")
+                        .replace(" ", "")
         );
 
         answerBot += "Starting YouTube link...\n";

@@ -6,6 +6,9 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import java.awt.*;
 import java.io.IOException;
 
+/**
+ * Меняет актуальный для просмотра последний сайт
+ */
 public class ChangeCheckSite extends IoTCommandBuild {
     @Override
     public String buildCommand(Update update) throws IOException, AWTException {

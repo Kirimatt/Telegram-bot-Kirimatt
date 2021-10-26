@@ -5,6 +5,9 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
+/**
+ * Нажатие пробела
+ */
 public class SpaceReq extends IoTCommandBuild {
 
     @Override

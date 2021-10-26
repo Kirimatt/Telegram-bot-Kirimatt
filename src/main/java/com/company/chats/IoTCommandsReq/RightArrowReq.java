@@ -5,6 +5,9 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 
 import java.awt.*;
 
+/**
+ * Стрелка вправо
+ */
 public class RightArrowReq extends IoTCommandBuild {
 
     @Override

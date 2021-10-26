@@ -6,6 +6,10 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import java.awt.*;
 import java.io.IOException;
 
+/**
+ * Открывает следующий эпизод
+ * @author kirimatt
+ */
 public class JutsuOpenNextEpisodeReq extends JutsuMain {
 
     @Override

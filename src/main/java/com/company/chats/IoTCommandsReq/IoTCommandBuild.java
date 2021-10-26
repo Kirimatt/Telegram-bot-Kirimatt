@@ -11,11 +11,13 @@ import java.io.InputStreamReader;
 import java.util.EnumMap;
 
 /**
+ * Класс для сборки команды
  * @author azamat
  */
 public abstract class IoTCommandBuild {
 
     protected Process soundLockProcess;
+    //TODO: В property файл
     protected String actualCheckSite = "https://animego.org/anime/granica-pustoty-2-teoriya-ubiystva-chast-1-o1841";
     private Robot rb;
     private EnumMap<CommandsEnum, Integer> arrowMap = new EnumMap<>(CommandsEnum.class);

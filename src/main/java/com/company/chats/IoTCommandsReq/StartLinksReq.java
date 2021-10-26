@@ -5,6 +5,9 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import java.awt.*;
 import java.io.IOException;
 
+/**
+ * Открывает несколько заранее детерменированных ссылок, включая актуальную для просмотра
+ */
 public class StartLinksReq extends IoTCommandBuild {
     private static final int ANISTAR_VERSION = 100;
 

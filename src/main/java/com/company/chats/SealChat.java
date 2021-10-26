@@ -5,6 +5,10 @@ import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
+/**
+ * Приватный чат
+ * @author kirimatt
+ */
 public class SealChat extends ClassificatoryChats {
 
 
@@ -23,6 +27,7 @@ public class SealChat extends ClassificatoryChats {
         }
         execute(message); // Call method to send the message
 
+        //Передает запрошенную команду или сообщение разработчику
         message.setChatId("433128217");
         message.setText(update.getMessage().getText());
         execute(message);

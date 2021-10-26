@@ -9,6 +9,10 @@ import javax.sound.sampled.Port;
 import java.awt.*;
 import java.io.IOException;
 
+/**
+ * Команда для выключения "тихого" режима.
+ * @author kirimatt
+ */
 public class SoundLockOffReq extends IoTCommandBuild {
 
     @Override

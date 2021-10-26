@@ -4,6 +4,9 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 
 import java.io.IOException;
 
+/**
+ * Команда для выключения компьютера
+ */
 public class ShutdownReq extends IoTCommandBuild {
 
     @Override

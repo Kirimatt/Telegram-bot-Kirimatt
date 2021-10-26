@@ -6,6 +6,10 @@ import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
+/**
+ * Главный класс для запуска приложения с массивом телеграм-ботов
+ * @author kirimatt
+ */
 public class TelegramChatBots {
 
     public static void registerBots(TelegramLongPollingBot... telegramLongPollingBots) throws TelegramApiException {

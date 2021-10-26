@@ -14,6 +14,10 @@ import java.awt.*;
 import java.io.IOException;
 import java.util.EnumMap;
 
+/**
+ * Чат для удаленного управления компьютером
+ * @author kirimatt
+ */
 public class IoTChat extends ClassificatoryChats {
 
     private static final IoTChat ioTChat = new IoTChat();

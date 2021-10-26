@@ -9,6 +9,10 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 
+/**
+ * Открывает ссылку на jutsu с подключением драйвера Selenium и подгрузкой расширения для блокировки рекламы
+ * @author kirimatt
+ */
 public class JutsuOpenLinkReq extends JutsuMain {
 
     public JutsuOpenLinkReq() {
@@ -24,7 +28,8 @@ public class JutsuOpenLinkReq extends JutsuMain {
                 replace(" ", "");
 
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("load-extension=C:\\Users\\kirimatt\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\cfhdojbkjhnklbpkdaibdccddilifddb\\3.11.2_0");
+        options.addArguments("load-extension=C:\\Users\\kirimatt\\AppData\\Local\\" +
+                "Google\\Chrome\\User Data\\Default\\Extensions\\cfhdojbkjhnklbpkdaibdccddilifddb\\3.11.2_0");
 
         driver = new ChromeDriver(options);
         driver.get(site);

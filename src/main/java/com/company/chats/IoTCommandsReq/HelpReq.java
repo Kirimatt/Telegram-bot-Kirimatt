@@ -8,6 +8,10 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
+/**
+ * Высылает ответ со всеми командами
+ * @author kirimatt
+ */
 public class HelpReq extends IoTCommandBuild {
     @Override
     public String buildCommand(Update update) throws IOException, AWTException {

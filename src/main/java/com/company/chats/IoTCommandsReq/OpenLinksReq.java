@@ -6,6 +6,10 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import java.awt.*;
 import java.io.IOException;
 
+/**
+ * Открывает несколько ссылок
+ * @author kirimatt
+ */
 public class OpenLinksReq extends IoTCommandBuild {
     @Override
     public String buildCommand(Update update) throws IOException, AWTException {

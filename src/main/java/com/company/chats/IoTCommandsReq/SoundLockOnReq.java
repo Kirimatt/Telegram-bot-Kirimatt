@@ -4,6 +4,11 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 
 import java.io.IOException;
 
+/**
+ * Команда для включения "тихого" режима
+ * Запускает программу, которая отслеживает уровень звука и блокирует его на одном уровне.
+ * @author kirimatt
+ */
 public class SoundLockOnReq extends IoTCommandBuild {
 
     @Override

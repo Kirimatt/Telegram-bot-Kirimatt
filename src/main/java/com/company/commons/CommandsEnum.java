@@ -2,6 +2,10 @@ package com.company.commons;
 
 import java.util.Locale;
 
+/**
+ * Перечисление для всех команд
+ * @author kirimatt
+ */
 public enum CommandsEnum {
 
     SHUTDOWN(0, "/shutdown", "Выключение компьютера через 2 минуты."),
