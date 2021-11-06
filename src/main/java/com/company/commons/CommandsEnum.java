@@ -9,7 +9,7 @@ import java.util.Locale;
  */
 public enum CommandsEnum {
 
-    SHUTDOWN(0, "/shutdown", "Выключение компьютера через 2 минуты."),
+    SHUTDOWN(0, "/shutdown", "Выключение компьютера через 2 минуты или через заданное время."),
     SPACE(1, "/space", "Пробел для паузы и воспроизведения."),
     YOUTUBE_LINK(2, "/youtube", "Воспроизвести ссылку на YouTube."),
     RIGHT_ARROW(3, "/right", "Стрелка вправо для проматывания вперед."),
@@ -17,7 +17,7 @@ public enum CommandsEnum {
     SOUND_LOCK_ON(5, "/soundlockon", "Включение ограничения громкости."),
     SOUND_LOCK_OFF(6, "/soundlockoff", "Выключение ограничения громкости."),
     UP_ARROW(7, "/up", "Стрелка вверх для увеличения громкости."),
-    DOWN_ARROW(8, "/down", "Стрелка вниз для увеличения громкости."),
+    DOWN_ARROW(8, "/down", "Стрелка вниз для уменьшения громкости."),
     OPEN_LINKS(9, "/openlinks", "Открывает вкладки с заданными ссылками."),
     START_LINKS(10, "/startlinks", "Открывает начальные вкладки."),
     CHANGE_CHECK_SITE(11, "/changecheck", "Меняет последний сайт для просмотра."),
